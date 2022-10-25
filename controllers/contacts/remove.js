@@ -2,6 +2,7 @@ const {Contact} = require('../../models/contact');
 const { RequestError } = require('../../helpers');
 
 const remove = async (req, res) => {
+    // const { Contact } = contact;
     const { contactId } = req.params;
     const result = await Contact.findByIdAndRemove(contactId);
     if (!result) {
