@@ -19,7 +19,7 @@ router.get('/current', authenticate, ctrlWrapper(ctrl.getCurrent));
 router.patch('/', authenticate, ctrlWrapper(ctrl.subscriptionUpdate));
 
 router.patch('/avatars', authenticate, upload.single('avatar'), ctrlWrapper(ctrl.updateAvatar));
-
+// upload.single('avatar'),
 //logout
 router.get('/logout', authenticate, ctrlWrapper(ctrl.logout));
 
