@@ -11,8 +11,13 @@ const router = express.Router();
 //signup
 router.post('/register', validateBody(user.schemas.registerSchema), ctrlWrapper(ctrl.register));
 
+router.get('/verify/:verificationToken', ctrlWrapper(ctrl.verify));
+
+router.post('/verify', validateBody(user.schemas.verifyEmailSchema), ctrlWrapper(ctrl.resendVerify));
+
 //signin
 router.post('/login', validateBody(user.schemas.loginSchema), ctrlWrapper(ctrl.login));
+
 
 router.get('/current', authenticate, ctrlWrapper(ctrl.getCurrent));
 
