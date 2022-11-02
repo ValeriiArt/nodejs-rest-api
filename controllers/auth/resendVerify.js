@@ -1,7 +1,9 @@
 
 const { user } = require('../../models');
 
-const { RequestError, sendEmail, createVerifyEmail } = require('../../helpers');
+const { RequestError } = require('../../helpers');
+const { sendEmail, createVerifyEmail } = require('../../services');
+
 
 
 const resendVerify = async(req, res) => {
