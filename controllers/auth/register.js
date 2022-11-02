@@ -3,7 +3,8 @@ const gravatar = require('gravatar');
 const {nanoid} = require('nanoid')
 
 const { user } = require('../../models')
-const { RequestError, sendEmail, createVerifyEmail } = require('../../helpers');
+const { RequestError } = require('../../helpers');
+const { sendEmail, createVerifyEmail } = require('../../services')
 
 
 const register = async (req, res) => {
